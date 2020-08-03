@@ -16,12 +16,10 @@ export class BarraBusqueda extends Component {
         console.log(inputPokemon)
 
         fetch(`https://pokeapi.co/api/v2/pokemon/${inputPokemon}`)
-          .then(res => res.json())
-          .then(results => {
-            const { Search, totalResults = "0" } = results
-            console.log({ Search, totalResults })
-
-          })
+            .then(res => res.json())
+            .then(results => {
+                console.log(results)
+            })
     }
 
 
@@ -30,18 +28,13 @@ export class BarraBusqueda extends Component {
         return (
             <form onSubmit={this._handleSubmit}>
                 <div className="barra-busqueda">
-                    <div className="control">
-                        <input
-                            className="input"
-                            onChange={this._handleChange}
-                            type="text"
-                            placeholder="Nombre del pokemon..." />
-                    </div>
-                    <div className="control">
-                        <button className="button is-info">
-                            Buscar
-                        </button>
-                    </div>
+                    <input
+                        className="input"
+                        onChange={this._handleChange}
+                        type="text"
+                        placeholder="Nombre del pokemon..." />
+                
+                    <button> Buscar </button>
                 </div>
             </form>
         )
