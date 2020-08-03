@@ -17,6 +17,10 @@ class App extends Component {
 		<p>
                     ESTO ES UNA PRUEBA
                 </p>
+
+                <p>
+                    Segunda prueba
+                </p>
             </div>
         );
     }
