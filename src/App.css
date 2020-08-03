@@ -22,3 +22,54 @@
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
+
+.nuestro-header {
+    display: flex;
+    align-items: center;
+    background-color: #ef5350;
+    padding: 15px;
+}
+
+.nuestro-header * {
+    margin: 10px;
+}
+
+
+/*----------------------------------------------------------*/
+
+.barra-busqueda {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px
+}
+
+.barra-busqueda * * {
+    padding: 15px;
+    font-size: 30px;
+    border: 3px solid #ef5350;
+    border-radius: 12px;
+}
+
+.barra-busqueda input {
+}
+
+.barra-busqueda button {
+    transition-duration: 0.5s;
+    margin-left: 15px;
+    background-color: #ef5350;
+    color: white;
+    text-transform: uppercase;
+}
+
+.barra-busqueda button:hover {
+    background-color: white;
+    color: #ef5350;
+    cursor: pointer;
+}
+
+.barra-busqueda button:active {
+    background-color: #ef5350;
+    color: white;
+    transform: translateY(3px);
+}

@@ -29,7 +29,7 @@ export class BarraBusqueda extends Component {
     render () {
         return (
             <form onSubmit={this._handleSubmit}>
-                <div className="field has-addons">
+                <div className="barra-busqueda">
                     <div className="control">
                         <input
                             className="input"

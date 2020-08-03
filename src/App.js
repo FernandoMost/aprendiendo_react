@@ -9,7 +9,7 @@ class App extends Component {
 
     render() { return (
         <div className="App">
-            <div className="App-header">
+            <div className="nuestro-header">
                 <img src={logo} className="App-logo" alt="logo" />
                 <h1>PokeApp</h1>
             </div>
