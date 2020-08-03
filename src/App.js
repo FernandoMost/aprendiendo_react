@@ -1,29 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Link, Route } from "wouter";
+import { BarraBusqueda } from './components/BarraBusqueda'
+import logo from './logo.png';
 import './App.css';
 
 class App extends Component {
-    render() {
-        return (
-            <div className="App">
-                <div className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <h2>Welcome to React</h2>
-                </div>
-                <p className="App-intro">
-                    To get started, edit <code>src/App.js</code> and save to reload!
-                </p>
+    
 
-		<p>
-                    ESTO ES UNA PRUEBA
-                </p>
-
-                <p>
-                    Segunda prueba
-                </p>
+    render() { return (
+        <div className="App">
+            <div className="App-header">
+                <img src={logo} className="App-logo" alt="logo" />
+                <h1>PokeApp</h1>
             </div>
-        );
-    }
+
+            <BarraBusqueda />
+        </div>
+    ); }
 }
 
 export default App;
