@@ -5,34 +5,31 @@ export class BarraBusqueda extends Component {
         inputPokemon: ''
     }
 
-    _handleChange = (e) => {
-        this.setState({ inputPokemon: e.target.value })
+    _manejaCambio = (e) => {
+        this.setState({
+            inputPokemon: e.target.value
+        })
     }
 
-    _handleSubmit = (e) => {
+    _manejaBusqueda = (e) => {
         e.preventDefault()
         const { inputPokemon } = this.state
 
-        console.log(inputPokemon)
-
         fetch(`https://pokeapi.co/api/v2/pokemon/${inputPokemon}`)
             .then(res => res.json())
-            .then(results => {
-                console.log(results)
-            })
+            .then(results => this.props.onResults(results))
     }
 
 
 
     render () {
         return (
-            <form onSubmit={this._handleSubmit}>
+            <form onSubmit={this._manejaBusqueda}>
                 <div className="barra-busqueda">
                     <input
-                        className="input"
-                        onChange={this._handleChange}
+                        onChange={this._manejaCambio}
                         type="text"
-                        placeholder="Nombre del pokemon..." />
+                        placeholder="Nombre del pokémon..." />
                 
                     <button> Buscar </button>
                 </div>

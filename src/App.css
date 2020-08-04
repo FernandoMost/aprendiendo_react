@@ -4,16 +4,15 @@
 
 .App-logo {
     height: 90px;
+    cursor: pointer;
+    transition-duration: 125ms;
 }
 
-.App-intro {
-    font-size: large;
+.App-logo:hover {
+    transform: scale(1.05);
 }
 
-@keyframes App-logo-spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
+/*----------------------------------------------------------*/
 
 .nuestro-header {
     display: flex;
@@ -26,7 +25,6 @@
     margin: 10px;
     color: white
 }
-
 
 /*----------------------------------------------------------*/
 
@@ -43,7 +41,7 @@
 }
 
 .barra-busqueda button {
-    transition-duration: 0.5s;
+    transition-duration: 125ms;
     margin-left: 15px;
     background-color: #ef5350;
     color: white;
@@ -54,6 +52,7 @@
     background-color: white;
     color: #ef5350;
     cursor: pointer;
+    transform: scale(1.05);
 }
 
 .barra-busqueda button:active {

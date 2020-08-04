@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Link, Route } from "wouter";
-import { BarraBusqueda } from './components/BarraBusqueda';
-import { NuestroHeader } from './components/NuestroHeader';
+import { Route, Switch } from "wouter";
 import './App.css';
+
+import { NuestroHeader } from './components/NuestroHeader';
+import { Home } from './pages/Home';
 
 class App extends Component {
     
@@ -11,7 +12,9 @@ class App extends Component {
         <div className="App">
         	<NuestroHeader />
 
-            <BarraBusqueda />
+			<Switch>
+				<Route path="/" component={Home} />
+			</Switch>
         </div>
     ); }
 }
